@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  freeradius_ad:
+    build: .
+    container_name: nome_container
+    restart: unless-stopped
+    # Altere o hostname de acordo com sua preferência.
+    hostname: nome_do_host
+    extra_hosts: 
+    # Altere o dominio e o IP da máquina que o container será executado.
+      - "nome_do_host.dominio.br nome_do_host:x.x.x.x"     
+    dns: 
+    # Altere para os IPs de DNS da instituição.
+      - x.x.x.x                                            
+      - x.x.x.x
+    dns_opt: 
+      - use-vc
+    volumes:
+      - /data:/data
+      - /var/log/samba:/var/log/samba
+    working_dir: /etc/raddb
+    ports:
+    # Altere as portas da esquerda, que são as portas do host que está rodando o docker.
+      - "1812:1812/udp" 
+      - "1813:1813/udp"
+
+
