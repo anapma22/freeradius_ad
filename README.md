@@ -44,8 +44,8 @@ Utilizamos o FreeRADIUS e para que ele se comunique com o AD, são necessários 
 radtest -t mschap user_no_ad@dominio.br senha_do_user_no_ad localhost:1812 0 testing123
 
 ## Referências
-http://man7.org/linux/man-pages/man5/resolv.conf.5.html
-https://github.com/naturalis/docker-samba
-https://github.com/fjudith/docker-samba-join-ad
-https://github.com/million12/docker-centos-supervisor
-http://supervisord.org/configuration.html
+http://man7.org/linux/man-pages/man5/resolv.conf.5.html  
+https://github.com/naturalis/docker-samba  
+https://github.com/fjudith/docker-samba-join-ad  
+https://github.com/million12/docker-centos-supervisor  
+http://supervisord.org/configuration.html  
